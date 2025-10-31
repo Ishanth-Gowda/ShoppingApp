@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { UserProvider } from "./contexts/UserContext";
+import { CartProvider } from "./contexts/CartContext";
 
-function App() {
+import Navbar from "./components/Navbar";
+import GoTop from "./components/GoTop";
+import Home from "./pages/Home";
+import CategoryPage from "./pages/CategoryPage";
+import Cart from "./pages/Cart";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <UserProvider>
+        <CartProvider>
+          <Navbar />
+          <main className="container">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/category/:category" element={<CategoryPage />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+            </Routes>
+          </main>
+          <GoTop />
+          <footer className="footer">
+            <p>© {new Date().getFullYear()} The Shopping Store — All rights reserved</p>
+          </footer>
+        </CartProvider>
+      </UserProvider>
+    </Router>
   );
 }
-
-export default App;
