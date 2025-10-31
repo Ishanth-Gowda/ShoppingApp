@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Ishanth-Gowda/ShoppingApp/static/css/main.2cd7782a.css",
-    "main.js": "/Ishanth-Gowda/ShoppingApp/static/js/main.a1146187.js",
-    "index.html": "/Ishanth-Gowda/ShoppingApp/index.html",
-    "main.2cd7782a.css.map": "/Ishanth-Gowda/ShoppingApp/static/css/main.2cd7782a.css.map",
-    "main.a1146187.js.map": "/Ishanth-Gowda/ShoppingApp/static/js/main.a1146187.js.map"
+    "main.css": "/ShoppingApp/static/css/main.2cd7782a.css",
+    "main.js": "/ShoppingApp/static/js/main.68d4ab56.js",
+    "index.html": "/ShoppingApp/index.html",
+    "main.2cd7782a.css.map": "/ShoppingApp/static/css/main.2cd7782a.css.map",
+    "main.68d4ab56.js.map": "/ShoppingApp/static/js/main.68d4ab56.js.map"
   },
   "entrypoints": [
     "static/css/main.2cd7782a.css",
-    "static/js/main.a1146187.js"
+    "static/js/main.68d4ab56.js"
   ]
 }
