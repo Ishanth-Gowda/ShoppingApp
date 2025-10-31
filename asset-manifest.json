@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Ishanth-Gowda/ShoppingApp/static/css/main.2cd7782a.css",
+    "main.js": "/Ishanth-Gowda/ShoppingApp/static/js/main.a1146187.js",
+    "index.html": "/Ishanth-Gowda/ShoppingApp/index.html",
+    "main.2cd7782a.css.map": "/Ishanth-Gowda/ShoppingApp/static/css/main.2cd7782a.css.map",
+    "main.a1146187.js.map": "/Ishanth-Gowda/ShoppingApp/static/js/main.a1146187.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2cd7782a.css",
+    "static/js/main.a1146187.js"
+  ]
+}
