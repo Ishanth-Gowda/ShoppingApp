@@ -13,7 +13,8 @@ import Signup from "./pages/Signup";
 
 export default function App() {
   return (
-    <Router>
+    // Add basename for GitHub Pages
+    <Router basename="/ShoppingApp">
       <UserProvider>
         <CartProvider>
           <Navbar />
