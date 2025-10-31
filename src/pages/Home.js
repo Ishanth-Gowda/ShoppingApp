@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const categories = [
-    { slug: "men", name: "Men", img: "/images/menclothing.png" },
-    { slug: "women", name: "Women", img: "/images/womenclothing.png" },
-    { slug: "footwear", name: "Footwear", img: "/images/footwear.png" },
-    { slug: "accessories", name: "Accessories", img: "/images/accesories.png" },
+    { slug: "men", name: "Men", img: `${process.env.PUBLIC_URL}/images/menclothing.png` },
+    { slug: "women", name: "Women", img: `${process.env.PUBLIC_URL}/images/womenclothing.png` },
+    { slug: "footwear", name: "Footwear", img: `${process.env.PUBLIC_URL}/images/footwear.png` },
+    { slug: "accessories", name: "Accessories", img: `${process.env.PUBLIC_URL}/images/accesories.png` },
 ];
 
 export default function Home() {
