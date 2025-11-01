@@ -119,8 +119,9 @@ body {
     background: transparent;
     border: 1px solid #e6e6e6;
     color: #111111;
-    padding: 6px 10px;
+    padding: 6.5px 10px;
     transition: all 0.15s;
+    margin-left: 0.5rem;
 }
 
 .btn.ghost.logout {
@@ -175,6 +176,7 @@ body {
     color: var(--cream);
     transition: all .25s ease;
     border: 1px solid transparent;
+    padding: 10px 12px;
 }
 
 .btn.signup:hover {
@@ -186,11 +188,17 @@ body {
 /* Cart button */
 .cart-btn {
     text-decoration: none;
-    padding: 8px 10px;
+    padding: 7px 12px;
     background: var(--black);
     color: var(--cream);
     border-radius: 8px;
     font-weight: 700;
+}
+
+.cart-btn:hover {
+    background: var(--cream);
+    color: var(--black);
+    border: 0.5px solid black;
 }
 
 .user-text {
@@ -563,6 +571,95 @@ button,
 .cart-btn,
 .go-top {
     cursor: pointer;
+}
+
+/* HAMBURGER MENU FOR MOBILE */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26px;
+    height: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    z-index: 300;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: var(--black);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+/* Fix X alignment */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(4px, -4px);
+}
+
+/* Mobile dropdown menu */
+@media (max-width: 400px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        position: relative;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 55px;
+        right: 10px;
+        background: #fff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        padding: 10px 12px;
+        flex-direction: column;
+        gap: 10px;
+        z-index: 250;
+        align-items: center;
+        /* ✅ centers all buttons evenly */
+    }
+
+    .nav-menu.open {
+        display: flex;
+    }
+
+    /* ✅ Ensures Login and Signup line up vertically */
+    .nav-menu .btn,
+    .nav-menu .btn.ghost {
+        width: 140px;
+        text-align: center;
+        margin: 0;
+        display: block;
+        padding: 8px 0;
+    }
+
+    /* Keep cart visible always */
+    .cart-btn {
+        font-size: 15px;
+        padding: 6px 10px;
+        margin-left: -70px;
+    }
 }
 
 /* responsive */
